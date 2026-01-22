@@ -60,8 +60,31 @@ export default function Home() {
       // Informações de contato
       addText('Igrejinha – RS', 12)
       addText('(51) 99942-1776', 12)
-      addText('luanafurta082@gmail.com', 12)
-      addText('Portfólio: https://portifolioluana.vercel.app/', 12)
+      
+      // Email como link clicável
+      doc.setFontSize(12)
+      doc.setTextColor(0, 0, 255)
+      doc.setFont(undefined, 'normal')
+      const emailText = 'luanafurta082@gmail.com'
+      const emailWidth = doc.getTextWidth(emailText)
+      doc.text(emailText, margin, yPos)
+      doc.link(margin, yPos - 4, emailWidth, 5, { url: 'mailto:luanafurta082@gmail.com' })
+      doc.setTextColor(0, 0, 0)
+      yPos += 9
+      
+      // Portfólio como link clicável
+      doc.setFontSize(12)
+      doc.setTextColor(0, 0, 0)
+      const portfolioLabel = 'Portfólio: '
+      doc.text(portfolioLabel, margin, yPos)
+      const portfolioText = 'https://portifolioluana.vercel.app/'
+      const portfolioX = margin + doc.getTextWidth(portfolioLabel)
+      const portfolioWidth = doc.getTextWidth(portfolioText)
+      doc.setTextColor(0, 0, 255)
+      doc.text(portfolioText, portfolioX, yPos)
+      doc.link(portfolioX, yPos - 4, portfolioWidth, 5, { url: 'https://portifolioluana.vercel.app/' })
+      doc.setTextColor(0, 0, 0)
+      yPos += 9
       yPos += 5
 
       // Competências
