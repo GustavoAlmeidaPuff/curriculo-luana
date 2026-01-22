@@ -36,9 +36,9 @@ export default function Home() {
         const rgb = hexToRgb(color)
         doc.setTextColor(rgb.r, rgb.g, rgb.b)
         if (isBold) {
-          doc.setFont(undefined, 'bold')
+          doc.setFont('helvetica', 'bold')
         } else {
-          doc.setFont(undefined, 'normal')
+          doc.setFont('helvetica', 'normal')
         }
         
         const lines = doc.splitTextToSize(text, maxWidth)
@@ -64,7 +64,7 @@ export default function Home() {
       // Email como link clicável
       doc.setFontSize(12)
       doc.setTextColor(0, 0, 255)
-      doc.setFont(undefined, 'normal')
+      doc.setFont('helvetica', 'normal')
       const emailText = 'luanafurta082@gmail.com'
       const emailWidth = doc.getTextWidth(emailText)
       doc.text(emailText, margin, yPos)
