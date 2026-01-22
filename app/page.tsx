@@ -105,11 +105,10 @@ export default function Home() {
       addText('• Apoio em rotinas administrativas e trabalho em equipe', 12)
       yPos += 3
 
-      // Formação
-      addText('Formação', 16, true, '#dc2626')
+      // Formação Acadêmica
+      addText('Formação Acadêmica', 16, true, '#dc2626')
       addText('2025', 12, true)
-      addText('Ensino Médio Completo, Igrejinha – RS - Ensino Médio', 12, true)
-      addText('Atuar na área de Fotografia e Design, desenvolvendo minhas habilidades criativas e contribuindo com soluções visuais, mesmo em nível inicial.', 12)
+      addText('Ensino Médio Completo - Ensino Médio', 12, true)
       yPos += 3
       addText('Cursos Complementares:', 12, true)
       addText('• Operador Logístico – SENAI (800h)', 12)
@@ -225,7 +224,7 @@ export default function Home() {
 
           <section style={{ marginBottom: '20px' }}>
             <h2 style={{ color: '#dc2626', fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>
-              Formação
+              Formação Acadêmica
             </h2>
 
             <div style={{ marginBottom: '18px' }}>
@@ -233,11 +232,8 @@ export default function Home() {
                 2025
               </div>
               <div style={{ fontWeight: '600', fontSize: '15px', marginBottom: '12px' }}>
-                Ensino Médio Completo, Igrejinha – RS - <em>Ensino Médio</em>
+                Ensino Médio Completo - <em>Ensino Médio</em>
               </div>
-              <p style={{ fontSize: '15px', lineHeight: '1.7', marginBottom: '18px' }}>
-                Atuar na área de Fotografia e Design, desenvolvendo minhas habilidades criativas e contribuindo com soluções visuais, mesmo em nível inicial.
-              </p>
             </div>
 
             <div>

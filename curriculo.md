@@ -27,13 +27,11 @@ Fotografia (composição, luz e enquadramento), noções de design para anúncio
 
 - Apoio em rotinas administrativas e trabalho em equipe
 
-## <span style="color: red;">Formação</span>
+## <span style="color: red;">Formação Acadêmica</span>
 
 **2025**
 
-**Ensino Médio Completo, Igrejinha – RS** - *Ensino Médio*
-
-Atuar na área de Fotografia e Design, desenvolvendo minhas habilidades criativas e contribuindo com soluções visuais, mesmo em nível inicial.
+**Ensino Médio Completo** - *Ensino Médio*
 
 **Cursos Complementares:**
 
