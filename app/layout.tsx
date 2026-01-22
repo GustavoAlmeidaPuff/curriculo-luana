@@ -1,8 +1,30 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Currículo - Luana Furtado da Silva',
-  description: 'Currículo de Luana Furtado da Silva',
+  title: 'Luana Furtado - Fotógrafa Artística | Currículo',
+  description: 'Fotógrafa artística especializada em composição, luz e enquadramento. Criação de artes para anúncios, fotografia de produtos e design visual. Portfólio profissional disponível.',
+  openGraph: {
+    title: 'Luana Furtado - Fotógrafa Artística',
+    description: 'Fotógrafa artística especializada em composição, luz e enquadramento. Criação de artes para anúncios, fotografia de produtos e design visual. Explore uma coleção única de fotografias artísticas e retratos.',
+    url: 'https://portifolioluana.vercel.app/',
+    siteName: 'Luana Furtado - Fotógrafa Artística',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Luana Furtado - Fotógrafa Artística',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luana Furtado - Fotógrafa Artística',
+    description: 'Fotógrafa artística especializada em composição, luz e enquadramento. Criação de artes para anúncios, fotografia de produtos e design visual.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function RootLayout({
