@@ -64,13 +64,13 @@ export default function Home() {
           📄 Baixar em PDF
         </button>
 
-        <div ref={contentRef} style={{ backgroundColor: '#ffffff', padding: '40px' }}>
-          <div style={{ marginBottom: '30px' }}>
-            <p style={{ fontSize: '2em', fontWeight: '600', marginBottom: '20px', marginTop: 0, padding: 0 }}>
+        <div ref={contentRef} style={{ backgroundColor: '#ffffff', padding: '30px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <p style={{ fontSize: '1.8em', fontWeight: '600', marginBottom: '15px', marginTop: 0, padding: 0 }}>
               Luana Furtado da Silva
             </p>
 
-            <div style={{ fontSize: '16px', lineHeight: '1.8' }}>
+            <div style={{ fontSize: '14px', lineHeight: '1.6' }}>
               <div>Igrejinha – RS</div>
               <div>(51) 99942-1776</div>
               <div>luanafurta082@gmail.com</div>
@@ -88,28 +88,28 @@ export default function Home() {
             </div>
           </div>
 
-          <section style={{ marginBottom: '30px' }}>
-            <h2 style={{ color: '#dc2626', fontSize: '20px', fontWeight: '700', marginBottom: '15px' }}>
+          <section style={{ marginBottom: '18px' }}>
+            <h2 style={{ color: '#dc2626', fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>
               Competências
             </h2>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+            <p style={{ fontSize: '14px', lineHeight: '1.6' }}>
               Fotografia (composição, luz e enquadramento), noções de design para anúncios, criatividade e senso estético, organização, responsabilidade e proatividade, atendimento ao público.
             </p>
           </section>
 
-          <section style={{ marginBottom: '30px' }}>
-            <h2 style={{ color: '#dc2626', fontSize: '20px', fontWeight: '700', marginBottom: '15px' }}>
+          <section style={{ marginBottom: '18px' }}>
+            <h2 style={{ color: '#dc2626', fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>
               Experiência
             </h2>
 
-            <div style={{ marginBottom: '25px' }}>
-              <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '8px' }}>
+            <div style={{ marginBottom: '15px' }}>
+              <div style={{ fontWeight: '700', fontSize: '14px', marginBottom: '5px' }}>
                 DESDE 2023
               </div>
-              <div style={{ fontWeight: '600', fontSize: '16px', marginBottom: '8px' }}>
+              <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '5px' }}>
                 Freelancer, Igrejinha – RS - <em>Design e Loja de Acessórios</em>
               </div>
-              <ul style={{ marginLeft: '20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul style={{ marginLeft: '20px', fontSize: '14px', lineHeight: '1.6' }}>
                 <li>Criação de artes para anúncios</li>
                 <li>Fotografia de produtos</li>
                 <li>Organização da loja e atendimento ao público</li>
@@ -117,40 +117,40 @@ export default function Home() {
             </div>
 
             <div>
-              <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '8px' }}>
+              <div style={{ fontWeight: '700', fontSize: '14px', marginBottom: '5px' }}>
                 2023 – 2024
               </div>
-              <div style={{ fontWeight: '600', fontSize: '16px', marginBottom: '8px' }}>
+              <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '5px' }}>
                 SENAI, Igrejinha – RS - <em>Jovem Aprendiz</em>
               </div>
-              <ul style={{ marginLeft: '20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul style={{ marginLeft: '20px', fontSize: '14px', lineHeight: '1.6' }}>
                 <li>Apoio em rotinas administrativas e trabalho em equipe</li>
               </ul>
             </div>
           </section>
 
-          <section style={{ marginBottom: '30px' }}>
-            <h2 style={{ color: '#dc2626', fontSize: '20px', fontWeight: '700', marginBottom: '15px' }}>
+          <section style={{ marginBottom: '18px' }}>
+            <h2 style={{ color: '#dc2626', fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>
               Formação
             </h2>
 
-            <div style={{ marginBottom: '20px' }}>
-              <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '8px' }}>
+            <div style={{ marginBottom: '15px' }}>
+              <div style={{ fontWeight: '700', fontSize: '14px', marginBottom: '5px' }}>
                 2025
               </div>
-              <div style={{ fontWeight: '600', fontSize: '16px', marginBottom: '15px' }}>
+              <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '10px' }}>
                 Ensino Médio Completo, Igrejinha – RS - <em>Ensino Médio</em>
               </div>
-              <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '20px' }}>
+              <p style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '15px' }}>
                 Atuar na área de Fotografia e Design, desenvolvendo minhas habilidades criativas e contribuindo com soluções visuais, mesmo em nível inicial.
               </p>
             </div>
 
             <div>
-              <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '8px' }}>
+              <div style={{ fontWeight: '700', fontSize: '14px', marginBottom: '5px' }}>
                 Cursos Complementares:
               </div>
-              <ul style={{ marginLeft: '20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul style={{ marginLeft: '20px', fontSize: '14px', lineHeight: '1.6' }}>
                 <li>Operador Logístico – SENAI (800h)</li>
               </ul>
             </div>
