@@ -13,8 +13,6 @@ Fotografia (composição, luz e enquadramento), noções de design para anúncio
 
 ## <span style="color: red;">Experiência</span>
 
-**DESDE 2023**
-
 **Freelancer, Igrejinha – RS** - *Design e Loja de Acessórios*
 
 - Criação de artes para anúncios

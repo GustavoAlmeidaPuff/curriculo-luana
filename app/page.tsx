@@ -94,7 +94,6 @@ export default function Home() {
 
       // Experiência
       addText('Experiência', 16, true, '#dc2626')
-      addText('DESDE 2023', 12, true)
       addText('Freelancer, Igrejinha – RS - Design e Loja de Acessórios', 12, true)
       addText('• Criação de artes para anúncios', 12)
       addText('• Fotografia de produtos', 12)
@@ -196,9 +195,6 @@ export default function Home() {
             </h2>
 
             <div style={{ marginBottom: '18px' }}>
-              <div style={{ fontWeight: '700', fontSize: '15px', marginBottom: '6px' }}>
-                DESDE 2023
-              </div>
               <div style={{ fontWeight: '600', fontSize: '15px', marginBottom: '6px' }}>
                 Freelancer, Igrejinha – RS - <em>Design e Loja de Acessórios</em>
               </div>
