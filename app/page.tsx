@@ -6,21 +6,92 @@ export default function Home() {
   const contentRef = useRef<HTMLDivElement>(null)
 
   const handleDownloadPDF = async () => {
-    if (!contentRef.current) return
-
     try {
-      const html2pdf = (await import('html2pdf.js')).default
-      const element = contentRef.current
-      const opt = {
-        margin: [5, 5, 5, 5],
-        filename: 'curriculo-luana-furtado.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 1.5, useCORS: true, letterRendering: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      const { jsPDF } = await import('jspdf')
+      const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      })
+
+      const pageWidth = doc.internal.pageSize.getWidth()
+      const pageHeight = doc.internal.pageSize.getHeight()
+      const margin = 15
+      const maxWidth = pageWidth - (margin * 2)
+      let yPos = margin
+
+      // Função para converter cor hex para RGB
+      const hexToRgb = (hex: string) => {
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+        return result ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16)
+        } : { r: 0, g: 0, b: 0 }
       }
 
-      html2pdf().set(opt).from(element).save()
+      // Função para adicionar texto com quebra de linha
+      const addText = (text: string, fontSize: number, isBold: boolean = false, color: string = '#000000') => {
+        doc.setFontSize(fontSize)
+        const rgb = hexToRgb(color)
+        doc.setTextColor(rgb.r, rgb.g, rgb.b)
+        if (isBold) {
+          doc.setFont(undefined, 'bold')
+        } else {
+          doc.setFont(undefined, 'normal')
+        }
+        
+        const lines = doc.splitTextToSize(text, maxWidth)
+        lines.forEach((line: string) => {
+          if (yPos > pageHeight - margin) {
+            doc.addPage()
+            yPos = margin
+          }
+          doc.text(line, margin, yPos)
+          yPos += fontSize * 0.5
+        })
+        yPos += 3
+      }
+
+      // Nome
+      addText('Luana Furtado da Silva', 20, true)
+      yPos += 5
+
+      // Informações de contato
+      addText('Igrejinha – RS', 12)
+      addText('(51) 99942-1776', 12)
+      addText('luanafurta082@gmail.com', 12)
+      addText('Portfólio: https://portifolioluana.vercel.app/', 12)
+      yPos += 5
+
+      // Competências
+      addText('Competências', 16, true, '#dc2626')
+      addText('Fotografia (composição, luz e enquadramento), noções de design para anúncios, criatividade e senso estético, organização, responsabilidade e proatividade, atendimento ao público.', 12)
+      yPos += 3
+
+      // Experiência
+      addText('Experiência', 16, true, '#dc2626')
+      addText('DESDE 2023', 12, true)
+      addText('Freelancer, Igrejinha – RS - Design e Loja de Acessórios', 12, true)
+      addText('• Criação de artes para anúncios', 12)
+      addText('• Fotografia de produtos', 12)
+      addText('• Organização da loja e atendimento ao público', 12)
+      yPos += 3
+      addText('2023 – 2024', 12, true)
+      addText('SENAI, Igrejinha – RS - Jovem Aprendiz', 12, true)
+      addText('• Apoio em rotinas administrativas e trabalho em equipe', 12)
+      yPos += 3
+
+      // Formação
+      addText('Formação', 16, true, '#dc2626')
+      addText('2025', 12, true)
+      addText('Ensino Médio Completo, Igrejinha – RS - Ensino Médio', 12, true)
+      addText('Atuar na área de Fotografia e Design, desenvolvendo minhas habilidades criativas e contribuindo com soluções visuais, mesmo em nível inicial.', 12)
+      yPos += 3
+      addText('Cursos Complementares:', 12, true)
+      addText('• Operador Logístico – SENAI (800h)', 12)
+
+      doc.save('curriculo-luana-furtado.pdf')
     } catch (error) {
       console.error('Erro ao gerar PDF:', error)
     }
